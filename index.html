@@ -25,21 +25,30 @@
             <!-- <img src="./img/border.jpg" alt="ヘッダー部下線" />  -->
         </header>
         <main>
-            <section>
-                <div class="right-banner">
-                    <a href="./room"><img src="./img/higaeri.jpg" alt="選べるお部屋" /></a>
-                    <a href="./speciality"><img src="./img/kankouchi.jpg" alt="源泉かけ流し" /></a>
-                    <a href="./meal"><img src="./img/kounou.jpg" alt="料理" /></a>
-                    <img src="./img/qr.png" alt="胡紛旅館" />
-                    <a href="./bus"><img src="./img/sekken.jpg" alt="直行バス" /></a>
+            <section id="left-flex">
+                <a href="./room"><img src="./img/menu_01a.png" alt="選べるお部屋" /></a>
+                <a href="./speciality"><img src="./img/menu_02a.png" alt="源泉かけ流し" /></a>
+                <a href="./meal"><img src="./img/menu_03a.jpg" alt="料理" /></a>
+                <img src="./img/info.png" alt="胡紛旅館" />
+                <div class="inner-info">
+                    <ul>
+                        <li>〒390-1515</li>
+                        <li>長野県松本市安曇野白骨温泉</li>
+                        <li>TEL:0263-00-0000</li>
+                        <li>FAX:0263-00-0000</li>
+                    </ul>
+                    <p>松本バスターミナル（JR松本駅）より、</p>
+                    <p>白骨駅直通バスを運行しております。</p>
+                    <p>（2011年春～秋版）</p>
                 </div>
+                <a href="./bus"><img src="./img/banner_01.png" alt="直行バス" /></a>
             </section>
-            <section>
-                <article id="plan-flex">
+            <section id="center-flex">
+                <article>
                     <div class="plan-image"><a href="./plan1/1"><img src="./img/gohun_plan.jpg" alt="宿泊１番人気プラン" /></a></div>
                     <!-- <div class="detail"> -->
                     <dl class="detail">
-                        <dt><a href="./plan1/1">胡紛プラン　お２人様　２１，０００円</a></dt>
+                        <dt><a href="./plan/1">胡紛プラン　お２人様　２１，０００円</a></dt>
                         <dd><p>一番人気の1泊2食付プラン</p>
                             <p>夕食はお食事処で、白骨温泉周辺で採れた山菜などの山の幸を使った、</p>
                             <p>囲炉裏懐石となります。</p>
@@ -48,11 +57,11 @@
                     </dl>
                     <!-- </div> -->
                 </article>
-                <article id="plan-flex">
+                <article>
                     <div class="plan-image"><a href="./plan1/2"><img src="./img/shinbeni_plan.jpg" alt="宿泊真紅プラン" /></a></div>
                     <!-- <div class="detail"> -->
                     <dl class="detail">
-                        <dt><a href="./plan1/2">真紅プラン　お２人様　２４，０００円</a></dt>
+                        <dt><a href="./plan/2">真紅プラン　お２人様　２４，０００円</a></dt>
                         <dd><p>記念日のお祝いに、「お酒・ケーキ」をサービス致します。</p>
                             <p>お酒は日本酒となっていますが、</p>
                             <p>苦手な方は他のお酒を用意しますので、</p>
@@ -61,11 +70,11 @@
                     </dl>
                     <!-- </div> -->
                 </article>
-                <article id="plan-flex">
+                <article>
                     <div class="plan-image"><a href="./plan1/3"><img src="./img/wakakusa_plan.jpg" alt="宿泊若草プラン" /></a></div>
                     <!-- <div class="detail"> -->
                     <dl class="detail">
-                        <dt><a href="./plan1/3">若草プラン　お２人様　１８，０００円</a></dt>
+                        <dt><a href="./plan/3">若草プラン　お２人様　１８，０００円</a></dt>
                         <dd><p>朝食抜きで、時間を気にせず朝寝坊したい方へのお勧めプラン。</p>
                             <p>チェックアウトの時間は12時になりますが</p>
                             <p>時間を変更されたい方は、</p>
@@ -78,7 +87,7 @@
                     <div class="plan-image"><a href="./plan2/2"><img src="./img/tenshoku_plan.jpg" alt="日帰り天食プラン" /></a></div>
                     <!-- <div class="detail"> -->
                     <dl class="detail">
-                        <dt><a href="./plan2/2">天食プラン</a></dt>
+                        <dt><a href="./plan/4">天食プラン</a></dt>
                         <dd><p>インターネット限定プラン！</p>
                             <p>ご予約の際お選び頂いた内容をご提示させて頂く、</p>
                             <p>自由なプランになっています。</p>
@@ -88,7 +97,48 @@
                     <!-- </div> -->
                 </article>
             </section>
-            <section></section>
+            <section id="right-flex">
+                <img src="./img/reservation.png" alt="ご予約" />
+                <ul>
+                    
+                </ul>
+                <div><img src="./img/factory.png" alt="館内案内" /></div>
+                <div><img src="./img/qr.png" alt="QRコード" /></div>
+                <a href="./around"><img src="./img/banner_02.png" alt="周辺観光地" /></a>
+                <a href="./restrant"><img src="./img/banner_03.png" alt="お食事処" /></a>
+                <a href="./live-camera"><img src="./img/banner_04.png" alt="ライブカメラ" /></a>
+            </section>
         </main>
+        <footer>
+            <nav id="f_left-navi">
+                <h4>ご案内</h4>
+                <ul class="sitemap">
+                    <li><a href="./">ホーム</a></li>
+                    <li><a href="./meal">料理</a></li>
+                    <li><a href="./spa">温泉</a></li>
+                    <li><a href="./room">客室</a></li>
+                    <li><a href="./factory">館内施設</a></li>
+                </ul>
+                <ul class="sitemap">
+                    <li><a href="./plan">宿泊プラン一覧</a></li>
+                    <li><a href="./reserve">予約</a></li>
+                    <li><a href="./access">交通案内</a></li>
+                    <li><a href="./contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div id="f_right-info">
+                <h3>胡紛温泉</h3>
+                <ul class="infomation">
+                    <li>〒390-1515</li>
+                    <li>長野県松本市安曇野白骨温泉</li>
+                    <li>TEL:0263-00-0000</li>
+                    <li>FAX:0263-00-0000</li>
+                    <li class="url"><a href="./">http://www.shirahone-kohun.com</a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <p class="copyright">Copyright©2011 胡紛温泉 All Right Reserved.</p>
+            </div>
+        </footer>
     </div>
 </html>
