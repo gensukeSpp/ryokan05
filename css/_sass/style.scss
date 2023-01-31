@@ -1,0 +1,99 @@
+@charset 'utf-8';
+
+$item-center: 0 auto;
+$anchor-reset: underline;
+
+@mixin flex-col($ratio, $distribute1: 0, $distribute2: 0) {
+    flex: $distribute1 $distribute2 $ratio;
+}
+@mixin fit-image($w: inherit) {
+    object-fit: contain;
+    width: $w;        
+}
+@mixin back-image($path) {
+    background-image: url($path);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@mixin article-area($font-sizing) {
+    font-size: $font-sizing;
+    padding-bottom: 9px;
+    line-height: calc($font-sizing*1.5);
+}
+
+h1 { display: none; }
+#container {
+    /* 見本1263px */
+    width: 100%;
+    background-color: black;
+    > * {
+        width: 71vw;
+        margin: $item-center;
+    }
+    header {
+        nav.logo-navi .top-image {
+            @include back-image("../img/header_bg.jpg");
+            img {
+                @include fit-image();
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    &::brfore {
+                        content: "";
+                        @include back-image("../img/arrow.gif");
+                    }
+                }
+            }
+        }
+        nav.menu-navi {
+            img {
+                @include fit-image();
+            }
+            ul.head-menu {
+                li {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        section#left-flex {
+            @include flex-col(29%);
+            .inner-info {
+                @include back-image("../img/info.png");
+            }
+        }
+        section#center-flex {
+            @include flex-col(45%);
+            article#plan-flex {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                line-height: 0;
+                margin-bottom: 31px;
+                .plan-image {
+                    @include flex-col(30%);
+                    a img {
+                        @include fit-image(100%);
+                    }
+                }
+                dl.detail {
+                    @include flex-col(65%);
+                    margin-left: 11px;
+                    dt {
+                        @include article-area(1.25em);
+                        color: #E5E3B4;
+                    }
+                    dd p {
+                        @include article-area(0.75em);
+                        color: black;
+                    }
+                }
+            }
+        
+        }
+    }
+}
