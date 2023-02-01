@@ -22,14 +22,18 @@ h1 {
      object-fit: contain;
   width: inherit;
 }
-#container header nav.logo-navi .top-image ul li {
+#container header nav.logo-navi .top-image ul.top-list li {
   display: inline-block;
 }
-#container header nav.logo-navi .top-image ul li::brfore {
+#container header nav.logo-navi .top-image ul.top-list li::brfore {
   content: "";
   background-image: url("../img/arrow.gif");
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 #container header nav.menu-navi img {
   -o-object-fit: contain;
@@ -42,6 +46,7 @@ h1 {
 #container main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #container main section#left-flex {
   flex: 0 0 29%;
@@ -54,34 +59,63 @@ h1 {
 #container main section#center-flex {
   flex: 0 0 45%;
 }
-#container main section#center-flex article#plan-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  line-height: 0;
-  margin-bottom: 31px;
-}
-#container main section#center-flex article#plan-flex .plan-image {
-  flex: 0 0 30%;
-}
-#container main section#center-flex article#plan-flex .plan-image a img {
+#container main section#center-flex .lodging-title img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
 }
-#container main section#center-flex article#plan-flex dl.detail {
-  flex: 0 0 65%;
-  margin-left: 11px;
+#container main section#center-flex article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  line-height: 0;
 }
-#container main section#center-flex article#plan-flex dl.detail dt {
+#container main section#center-flex article .plan-image {
+  flex: 0 0 30%;
+}
+#container main section#center-flex article .plan-image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+#container main section#center-flex article dl.detail {
+  flex: 0 0 65%;
+}
+#container main section#center-flex article dl.detail dt {
   font-size: 1.25em;
   padding-bottom: 9px;
   line-height: 1.875em;
-  color: #E5E3B4;
+  color: #004c00;
 }
-#container main section#center-flex article#plan-flex dl.detail dd p {
+#container main section#center-flex article dl.detail dd p {
   font-size: 0.75em;
   padding-bottom: 9px;
   line-height: 1.125em;
-  color: black;
+}
+#container main section#right-flex {
+  flex: 0 0 25%;
+}
+#container footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url("../img/footer_bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#container footer nav#left-navi {
+  flex: 0 0 30%;
+}
+#container footer nav#left-navi ul.sitemap:nth-of-type(1) {
+  float: left;
+}
+#container footer nav#left-navi ul.sitemap:nth-of-type(2) {
+  float: right;
+}
+#container footer #right-info {
+  flex: 0 0 30%;
+}
+#container footer #foot-bottom {
+  flex: 0 0 100%;
 }/*# sourceMappingURL=style.css.map */

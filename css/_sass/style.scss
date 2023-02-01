@@ -36,12 +36,14 @@ h1 { display: none; }
             img {
                 @include fit-image();
             }
-            ul {
+            ul.top-list {
                 li {
                     display: inline-block;
                     &::brfore {
                         content: "";
                         @include back-image("../img/arrow.gif");
+                        display: inline-block;
+                        @include fit-image(100%);            
                     }
                 }
             }
@@ -60,6 +62,7 @@ h1 { display: none; }
     main {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         section#left-flex {
             @include flex-col(29%);
             .inner-info {
@@ -68,32 +71,65 @@ h1 { display: none; }
         }
         section#center-flex {
             @include flex-col(45%);
-            article#plan-flex {
+            .lodging-title {
+                img {
+                    @include fit-image(100%);
+                }
+            }
+            article {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
                 line-height: 0;
-                margin-bottom: 31px;
                 .plan-image {
                     @include flex-col(30%);
-                    a img {
+                    img {
                         @include fit-image(100%);
                     }
                 }
                 dl.detail {
                     @include flex-col(65%);
-                    margin-left: 11px;
                     dt {
                         @include article-area(1.25em);
-                        color: #E5E3B4;
+                        color: #004c00;
                     }
                     dd p {
                         @include article-area(0.75em);
-                        color: black;
                     }
                 }
+            }        
+        }
+        section#right-flex {
+            @include flex-col(25%);
+        }
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        @include back-image("../img/footer_bg.jpg");
+        nav#left-navi {
+            @include flex-col(30%);
+            ul.sitemap {
+                &:nth-of-type(1) {
+                    float: left;
+                    // &::after {
+                    //     content: "";
+                    //     display: block;
+                    //     clear: both;            
+                    // }
+                }
+                &:nth-of-type(2) {
+                    float: right;
+                }
             }
-        
+        }
+        #right-info {
+            @include flex-col(30%);
+        }
+        #foot-bottom {
+            @include flex-col(100%);
         }
     }
 }
