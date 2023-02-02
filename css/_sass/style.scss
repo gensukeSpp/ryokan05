@@ -33,13 +33,17 @@ h1 { display: none; }
     header {
         nav.logo-navi .top-image {
             @include back-image("../img/header_bg.jpg");
+            position: relative;
             img {
                 @include fit-image();
             }
             ul.top-list {
+                position: absolute;
+                top: 0;
+                right: 0;
                 li {
                     display: inline-block;
-                    &::brfore {
+                    &::before {
                         content: "";
                         @include back-image("../img/arrow.gif");
                         display: inline-block;
@@ -49,10 +53,14 @@ h1 { display: none; }
             }
         }
         nav.menu-navi {
+            position: relative;
+            overflow: hidden;
             img {
                 @include fit-image();
             }
             ul.head-menu {
+                position: absolute;
+                top: 80%;
                 li {
                     display: inline-block;
                 }
