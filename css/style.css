@@ -12,34 +12,36 @@ h1 {
   width: 71vw;
   margin: 0 auto;
 }
+#container header nav.logo-navi {
+  /* .top-image */
+}
 #container header nav.logo-navi .top-image {
   background-image: url("../img/header_bg.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
-#container header nav.logo-navi .top-image img {
+#container header nav.logo-navi .top-image .top-belt {
+  /* .top-belt ul */
+}
+#container header nav.logo-navi .top-image .top-belt img {
   -o-object-fit: contain;
      object-fit: contain;
   width: inherit;
 }
-#container header nav.logo-navi .top-image ul.top-list {
+#container header nav.logo-navi .top-image .top-belt ul.top-list {
+  height: 6vh;
   position: absolute;
   top: 0;
   right: 0;
 }
-#container header nav.logo-navi .top-image ul.top-list li {
+#container header nav.logo-navi .top-image .top-belt ul.top-list li {
   display: inline-block;
+  height: inherit;
 }
-#container header nav.logo-navi .top-image ul.top-list li::before {
-  content: "";
+#container header nav.logo-navi .top-image .top-belt ul.top-list li span {
   background-image: url("../img/arrow.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  display: inline-block;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
 }
 #container header nav.menu-navi {
   position: relative;
@@ -61,6 +63,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url("../img/bg.jpg");
 }
 #container main section#left-flex {
   flex: 0 0 29%;
