@@ -108,6 +108,7 @@ h1 {
 }
 #container main section#left-flex {
   flex: 0 0 29%;
+  padding: 1%;
 }
 #container main section#left-flex .inner-info {
   background-image: url("../img/info.png");
@@ -140,6 +141,7 @@ h1 {
 }
 #container main section#center-flex {
   flex: 0 0 45%;
+  padding: 1%;
 }
 #container main section#center-flex .lodging-title img {
   -o-object-fit: 100%;
@@ -151,7 +153,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  line-height: 0;
 }
 #container main section#center-flex article .plan-image {
   flex: 0 0 30%;
@@ -163,20 +164,71 @@ h1 {
 }
 #container main section#center-flex article dl.detail {
   flex: 0 0 65%;
+  padding: 0 2%;
 }
 #container main section#center-flex article dl.detail dt {
   font-size: 0.8em;
-  line-height: 1.2em;
+  padding-bottom: 0.4em;
+  line-height: 1;
   font-weight: bold;
   color: #004c00;
 }
 #container main section#center-flex article dl.detail dd {
   font-size: 0.7em;
-  line-height: 1.05em;
+  padding-bottom: 0.35em;
+  line-height: 1.5;
   font-weight: bold;
 }
 #container main section#right-flex {
   flex: 0 0 25%;
+}
+#container main section#right-flex .reservation {
+  position: relative;
+}
+#container main section#right-flex .reservation ul {
+  position: absolute;
+  font-size: 0.6em;
+  font-weight: bold;
+  bottom: 18%;
+  left: 20%;
+}
+#container main section#right-flex .reservation ul li:nth-of-type(1)::before {
+  content: "";
+  background-color: #28f069;
+  display: block;
+  padding-top: 7%;
+  width: 7%;
+  position: absolute;
+  left: -10%;
+}
+#container main section#right-flex .reservation ul li:nth-of-type(2)::before {
+  content: "";
+  background-color: #fdff9a;
+  display: block;
+  padding-top: 7%;
+  width: 7%;
+  position: absolute;
+  left: -10%;
+}
+#container main section#right-flex .reservation ul li:nth-of-type(3)::before {
+  content: "";
+  background-color: #091a86;
+  display: block;
+  padding-top: 7%;
+  width: 7%;
+  position: absolute;
+  left: -10%;
+}
+#container main section#right-flex .facility {
+  position: relative;
+}
+#container main section#right-flex .facility ul {
+  position: absolute;
+  font-size: 0.7em;
+  font-weight: bold;
+  line-height: 1.75;
+  bottom: 15%;
+  left: 20%;
 }
 #container footer {
   display: flex;

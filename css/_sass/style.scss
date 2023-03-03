@@ -15,10 +15,10 @@ $anchor-reset: underline;
     background-size: $state;
     background-repeat: no-repeat;
 }
-@mixin article-area($font-sizing) {
+@mixin article-area($font-sizing, $lh: 1) {
     font-size: $font-sizing;
-    // padding-bottom: 9px;
-    line-height: calc($font-sizing*1.5);
+    padding-bottom: $font-sizing*0.5;
+    line-height: $lh;
 }
 
 h1 { display: none; }
@@ -123,6 +123,7 @@ h1 { display: none; }
         background-image: url("../img/bg.jpg");
         section#left-flex {
             @include flex-col(29%);
+            padding: 1%;
             .inner-info {
                 @include back-image("../img/info.png", cover);
                 width: inherit;
@@ -149,6 +150,7 @@ h1 { display: none; }
         }
         section#center-flex {
             @include flex-col(45%);
+            padding: 1%;
             .lodging-title {
                 img {
                     @include fit-image(100%);
@@ -159,7 +161,6 @@ h1 { display: none; }
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: flex-start;
-                line-height: 0;
                 .plan-image {
                     @include flex-col(30%);
                     img {
@@ -168,13 +169,14 @@ h1 { display: none; }
                 }
                 dl.detail {
                     @include flex-col(65%);
+                    padding: 0 2%;
                     dt {
                         @include article-area(0.8em);
                         font-weight: bold;
                         color: #004c00;
                     }
                     dd {
-                        @include article-area(0.7em);
+                        @include article-area(0.7em, 1.5);
                         font-weight: bold;
                     }
                 }
@@ -182,6 +184,46 @@ h1 { display: none; }
         }
         section#right-flex {
             @include flex-col(25%);
+            .reservation {
+                position: relative;;
+                ul {
+                    position: absolute;
+                    font-size: 0.6em;
+                    font-weight: bold;
+                    bottom: 18%;
+                    left: 20%;
+                    $three_pallet: (
+                        1:#28f069,
+                        2:#fdff9a,
+                        3:#091a86
+                    );
+                    @each $num, $color in $three_pallet {
+                        li:nth-of-type(#{$num}){
+                            &::before {
+                                content: "";
+                                background-color: $color;
+                                display: block;
+                                padding-top: 7%;
+                                width: 7%;
+                                position: absolute;
+                                // top: calc(#{$num}*(#{$num + 2})*5%); // 5 40 75
+                                left: -10%;
+                            }
+                        }
+                    }
+                }
+            }
+            .facility {
+                position: relative;;
+                ul {
+                    position: absolute;
+                    font-size: 0.7em;
+                    font-weight: bold;
+                    line-height: 1.75;
+                    bottom: 15%;
+                    left: 20%;
+                }
+            }
         }
     }
     footer {
